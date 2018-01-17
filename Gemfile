@@ -5,7 +5,9 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
+# Use sqlite3 as the database for Active Record
+  # Usa sqlite3 como base de datos para Active Record
+  gem 'sqlite3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 # Use Puma as the app server
@@ -36,6 +38,7 @@ gem 'nokogiri', '>=1.8.1'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+# 
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -58,13 +61,10 @@ group :development do
   # Spring acelera el desarrollo manteniendo su aplicación funcionando en segundo plano. Leer más: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  # Use sqlite3 as the database for Active Record
-  # Usa sqlite3 como base de datos para Active Record
-  gem 'sqlite3'
+  
 end
 
 group :production do
-  gem 'pg', '>= 0.19.0'
   gem 'rails_12factor'
 end
 
